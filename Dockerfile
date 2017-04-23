@@ -18,9 +18,9 @@ COPY docker-entrypoint.sh /
 COPY flink-daemon.sh /opt/flink/bin/
 COPY jobmanager.sh /opt/flink/bin/
 COPY taskmanager.sh /opt/flink/bin/
-COPY flink-conf.yml /opt/flink/conf/
+COPY flink-conf.yaml /opt/flink/conf/
 
-RUN chmod 755 /opt/flink/bin/*.sh; chmod 755 /opt/flink/conf/*.yml
+RUN chmod 755 /opt/flink/bin/*.sh; chmod 755 /opt/flink/conf/*.yaml
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["--help"]
