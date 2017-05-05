@@ -216,3 +216,9 @@ jobmanager.web.port: 8081
 # zookeeper.sasl.login-context-name: Client
 
 blob.server.port: 50100
+
+
+#metrics.reporters:
+#metrics.reporter.stsd.class: org.apache.flink.metrics.statsd.StatsDReporter
+#metrics.reporter.stsd.host: localhost 
+#metrics.reporter.stsd.port: 8125
