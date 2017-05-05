@@ -21,6 +21,7 @@ COPY taskmanager.sh /opt/flink/bin/
 COPY flink-conf.yaml /opt/flink/conf/
 
 RUN chmod 755 /opt/flink/bin/*.sh; chmod 755 /opt/flink/conf/*.yaml
+RUN cp $FLINK_HOME/opt/flink-metrics* $FLINK_HOME/lib/.
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["--help"]
